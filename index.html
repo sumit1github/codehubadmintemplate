@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Test Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .feature:hover {
+            background: #cbd5e0;
+        }
+
+        .emoji {
+            font-size: 3em;
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚀 Simple Test Page</h1>
+
+        <div class="card">
+            <h2>Welcome!</h2>
+            <p>This is a very simple but elegant HTML test page. It demonstrates clean design principles with modern
+                styling and smooth animations.</p>
+            <button class="btn" onclick="showAlert()">Click Me!</button>
+        </div>
+
+        <div class="card">
+            <h2>About This Page</h2>
+            <p>Created as a test HTML design featuring:</p>
+            <ul>
+                <li>Responsive design</li>
+                <li>Modern gradient backgrounds</li>
+                <li>Smooth hover animations</li>
+                <li>Clean typography</li>
+            </ul>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <span class="emoji">🎨</span>
+                <h3>Beautiful Design</h3>
+                <p>Clean and modern aesthetics</p>
+            </div>
+            <div class="feature">
+                <span class="emoji">📱</span>
+                <h3>Responsive</h3>
+                <p>Works on all devices</p>
+            </div>
+            <div class="feature">
+                <span class="emoji">⚡</span>
+                <h3>Fast Loading</h3>
+                <p>Optimized performance</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert('Hello! This is a simple test page. 👋');
+        }
+
+        // Add some simple interactivity
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('click', function () {
+                    this.style.transform = 'scale(1.02)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
